@@ -1,0 +1,250 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  /* Navbar Styling */
+  .navbar h1 {
+    margin: 0;
+  }
+  
+  /* Section Styling */
+  .section {
+    padding: 20px;
+    margin-bottom: 40px;
+  }
+  
+  h2, h3 {
+    color: #333;
+    font-size: 1.5rem; /* Increased font size for better readability */
+  }
+  
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  li {
+    font-size: 1.125rem; /* Use rem for better scalability */
+    color: #555;
+    margin-bottom: 8px;
+  }
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Profile Image */
+  .profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto; /* Horizontally center the image */
+    display: block; /* Ensures the image behaves like a block-level element */
+}
+
+/* Home Section */
+.home-left {
+    text-align: center; /* Centers the content inside */
+    flex: 1;
+}
+
+.home-right {
+    max-width: 600px;
+    margin: 0 auto;
+}
+  
+  /* Projects Section */
+  .project-card {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: auto; /* Ensures the image maintains its aspect ratio */
+    border-radius: 8px; /* Optional: add rounded corners to images */
+  }
+  
+  .project-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .project-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .project-card a:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Contact Table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Footer Styling */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .home-left,
+    .home-right {
+      text-align: center;
+    }
+  
+    .profile-image {
+      width: 150px;
+      height: 150px;
+    }
+  
+    .project-card {
+      margin-bottom: 20px;
+    }
+  
+    h2, h3 {
+      font-size: 1.25rem; /* Adjusted for better mobile readability */
+    }
+  
+    ul li {
+      font-size: 1rem; /* Adjusted list item font size for smaller screens */
+    }
+  }
+  
+  /* For Larger Desktops (Optional) */
+  @media (min-width: 1200px) {
+    .home-left,
+    .home-right {
+      text-align: left; /* Keep text aligned to the left for large screens */
+    }
+  
+    .profile-image {
+      width: 250px; /* Larger profile image for bigger screens */
+      height: 250px;
+    }
+  
+    .project-card {
+      width: 30%; /* Three columns for large screens */
+      display: inline-block;
+      margin: 1rem;
+    }
+  
+    .project-card img {
+      max-height: 300px; /* Control max height for project images */
+    }
+  
+    .project-card h3 {
+      font-size: 1.75rem; /* Slightly larger headings on large screens */
+    }
+  }
+  /* Certifications Section */
+.certification-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Create a responsive grid */
+    gap: 20px;
+    justify-items: center; /* Center the certification cards */
+  }
+  
+  .certification-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%; /* Ensure the card takes full width of the grid column */
+    max-width: 300px; /* Optional: limit card width for larger screens */
+  }
+  
+  .certification-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px; /* Space between image and text */
+  }
+  
+  .certification-card h3 {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .certification-card p {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  .certification-card a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .certification-card a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design for Certifications */
+  @media (max-width: 768px) {
+    .certification-grid {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Stack the certification cards more densely on smaller screens */
+    }
+  
+    .certification-card {
+      padding: 15px;
+    }
+  
+    .certification-card h3 {
+      font-size: 1.125rem; /* Slightly smaller font size for headings */
+    }
+  
+    .certification-card p {
+      font-size: 0.9rem; /* Slightly smaller text on mobile */
+    }
+  }
